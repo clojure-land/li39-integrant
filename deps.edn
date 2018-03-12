@@ -1,0 +1,11 @@
+{:paths ["src"]
+ :deps {:org.clojure/clojure {:mvn/version "1.9.0"}
+        com.cemerick/pomegranate {:mvn/version "1.0.0"}
+        integrant {:mvn/version "0.7.0-alpha1"}
+        integrant/repl {:mvn/version "0.3.0"}
+        ring/ring-jetty-adapter {:mvn/version "1.6.3"}
+        }
+ :aliases
+ {:nrepl {:extra-deps {:org.clojure/tools.nrepl {:mvn/version "0.2.12"}
+                       :cider/cider-nrepl {:mvn/version "0.17.0-SNAPSHOT"}}
+          :main-opts ["-m" "li38.nrepl"]}}}
