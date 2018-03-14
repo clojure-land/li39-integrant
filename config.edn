@@ -1,0 +1,5 @@
+{:handler/time {:prefix "It's "
+                :suffix ", coding time!"}
+ :ring/jetty   {:port 3000
+                :join? false
+                :handler #ig/ref :handler/time}}
