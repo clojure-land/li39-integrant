@@ -1,5 +1,0 @@
-{:li38.handler/time {:prefix "It's "
-                     :suffix "."}
- :li38.ring/jetty   {:port 3000
-                     :join? false
-                     :handler #ig/ref :li38.handler/time}}
