@@ -1,5 +1,5 @@
 {:paths ["src"]
- :deps {:org.clojure/clojure {:mvn/version "1.9.0"}
+ :deps {org.clojure/clojure {:mvn/version "1.9.0"}
         com.cemerick/pomegranate {:mvn/version "1.0.0"}
         integrant {:mvn/version "0.7.0-alpha1"}
         integrant/repl {:mvn/version "0.3.0"}
