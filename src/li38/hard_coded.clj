@@ -7,6 +7,7 @@
    :body (str "It's currently " (java.util.Date.) ". CODING TIME!")
    :headers {"Content-Type" "text/plain"}})
 
+#_
 (def server
   (ring-jetty/run-jetty time-handler {:port 3000 :join? false}))
 

@@ -8,7 +8,9 @@
                   :suffix ", coding time!"}
    :ring/jetty {:handler (ig/ref :handler/time)}})
 
-(defmethod ig/prep-key :ring/jetty [_ config]
+(derive :ring/jetty :http/server)
+
+(defmethod ig/prep-key :http/server [_ config]
   (merge {:port 3000
           :join? false}
          config))
@@ -33,5 +35,15 @@
     (.start server)
     (ig/init-key key config)))
 
+#_
 (def system
   (ig/init (ig/prep config)))
+
+(comment
+  (ig/halt! system)
+
+  (defmethod ig/init-key :my-app.ring/adapter [_ _])
+  ;; put this in (ns my-app.ring) or (ns my-app.ring.adapter)
+
+  (ig/load-namespaces config)
+  (ig/load-namespaces config keys))
